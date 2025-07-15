@@ -26,14 +26,12 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* HEADER / NAV */
 header {
   background-color: var(--cor-branco);
   padding: 20px 40px;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 1001;
 }
 
 nav {
@@ -49,10 +47,15 @@ nav h1 {
   color: var(--cor-preto);
 }
 
-nav ul {
-  list-style: none;
+/* Menu padrão (desktop) */
+.menu {
   display: flex;
   gap: 30px;
+  position: static;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  list-style: none;
 }
 
 nav ul li a {
@@ -94,12 +97,6 @@ nav ul li a:hover::after {
   cursor: pointer;
 }
 
-/* MENU DESKTOP */
-.menu {
-  display: flex;
-  gap: 30px;
-}
-
 /* MAIN */
 main {
   padding: 40px 20px;
@@ -119,7 +116,7 @@ main p {
   margin-bottom: 40px;
 }
 
-/* PRODUTOS */
+/* SEÇÃO DE PRODUTOS */
 .produtos-section {
   padding: 40px 20px;
   border-radius: 20px;
@@ -133,6 +130,7 @@ main p {
   margin-bottom: 30px;
 }
 
+/* GRID DE PRODUTOS */
 .produtos-grid {
   display: flex;
   gap: 20px;
@@ -140,6 +138,7 @@ main p {
   justify-content: center;
 }
 
+/* CARD PRODUTO */
 .card-produto {
   background-color: var(--cor-branco);
   border-radius: 12px;
@@ -173,6 +172,7 @@ main p {
   margin-bottom: 15px;
 }
 
+/* BOTÃO COMPRAR */
 .btn-comprar {
   background-color: var(--cor-dourado);
   color: var(--cor-preto);
@@ -188,7 +188,7 @@ main p {
   background-color: var(--cor-hover);
 }
 
-/* WHATSAPP */
+/* BOTÃO FLUTUANTE WHATSAPP */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -226,10 +226,11 @@ footer {
 
 footer > p {
   font-size: 0.8rem;
+  color: var(--cor-texto-suave);
   margin-top: 10px;
 }
 
-/* RESPONSIVO */
+/* MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -240,21 +241,17 @@ footer > p {
     align-items: flex-start;
   }
 
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
   .menu {
     flex-direction: column;
-    background-color: var(--cor-branco);
     position: absolute;
     top: 100%;
     left: 0;
     width: 100vw;
+    background-color: var(--cor-branco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   .menu.show {
