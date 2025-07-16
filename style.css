@@ -216,13 +216,14 @@ main p {
 
 /* FOOTER */
 footer {
-  background-color: var(--cor-cinza-claro);
-  padding: 20px;
+  background: none;
+  padding: 10px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: var(--cor-texto-suave);
   border-top: 1px solid var(--cor-prata);
 }
+
 
 footer > p {
   font-size: 0.8rem;
